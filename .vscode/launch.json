@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http://d6.local/invoice",
+            "request": "launch",
+            "url": "http://d6.local/invoice"
+        }
+    ]
+}

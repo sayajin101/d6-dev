@@ -1,0 +1,17 @@
+{
+    "name": "wesley/d6.local",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Routes\\": "routes/",
+            "Wesley\\D6Local\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wesley Classen",
+            "email": "weclassen@gmail.com"
+        }
+    ],
+    "require": {}
+}
