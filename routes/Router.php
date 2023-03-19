@@ -15,7 +15,7 @@ class Router {
     private function make($route)
     {
         switch ($route) {
-            case '':
+            case '/':
             case '/home':
             case '/index.php':
             case '/login':
@@ -32,6 +32,9 @@ class Router {
 
     private function handler($route, $request, $function)
     {
+        if (empty($route)) {
+            $route = '/';
+        }
         $route = $this->parseRoute($route);
         $controller = $this->make($route);
 

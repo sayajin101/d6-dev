@@ -27,7 +27,7 @@ class Invoice
     public function createInvoice($request)
     {
         $dbh = Database::connect();
-        $stmt = $dbh->prepare('INSERT INTO invoices (customer_id, subtotal, taxable, tax_rate, tax_due, other, total, comments, paid, due_date) VALUES (:customer_id, :subtotal, :taxable, :tax_rate, :tax_due, :other, :total, :comments, :paid, :due_date)');
+        $stmt = $dbh->prepare('INSERT INTO invoices (customer_id, subtotal, taxable, tax_rate, tax_due, total, comments, paid, due_date) VALUES (:customer_id, :subtotal, :taxable, :tax_rate, :tax_due, :total, :comments, :paid, :due_date)');
 
         $data = [
             'customer_id' => $request->customer_id,
@@ -35,7 +35,6 @@ class Invoice
             'taxable' => $request->taxable,
             'tax_rate' => $request->tax_rate,
             'tax_due' => $request->tax_due,
-            'other' => $request->other,
             'total' => $request->total,
             'comments' => $request->comments,
             'paid' => $request->paid,
